@@ -28,4 +28,12 @@ router.use('/admin/wallet', wallet.adminRouter);
 router.use('/products', products.router);
 router.use('/admin/products', products.adminRouter);
 
+// Phase 5 — Machine help system
+const machines = require('./machines.routes');
+const helpRequests = require('./helpRequests.routes');
+router.use('/machines', machines.router);
+router.use('/admin/machines', machines.adminRouter);
+router.use('/help-requests', helpRequests.router);
+router.use('/admin/help-requests', helpRequests.adminRouter);
+
 module.exports = router;
